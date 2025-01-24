@@ -1,13 +1,14 @@
-function f1(c){
-    const ulElements=document.getElementsByTagName('ul');
-    const olElements=document.getElementsByTagName('ol');
+function f1(color) {
+    const ulElements = document.getElementsByTagName('ul');
+    const olElements = document.getElementsByTagName('ol');
 
+    // Apply the color to all <ol> elements
     for (let i = 0; i < olElements.length; i++) {
-        // Apply styles from the 'c' object
-        Object.assign(olElements[i].style, c);
+        olElements[i].style.color = color;
     }
-    for (let i = 0; i < olElements.length; i++) {
-        // Apply styles from the 'c' object
-        Object.assign(ulElements[i].style, c);
+
+    // Apply the color to all <ul> elements
+    for (let i = 0; i < ulElements.length; i++) {
+        ulElements[i].style.color = color;
     }
 }
